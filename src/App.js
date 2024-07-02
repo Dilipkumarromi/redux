@@ -1,12 +1,14 @@
-import Button from 'react-bootstrap/Button';
+import Controller from "./redux-toolkit/components/Controller";
+import DisplayCounter from "./redux-toolkit/components/DisplayCounter";
 
-import DisplayCounter from './components/DisplayCounter';
-import Controller from './components/Controller';
 function App() {
   return (
-     <><DisplayCounter /><div className='raw'>
+    <>
+      <DisplayCounter />
+      <div className="raw">
       <Controller/>
-    </div></>
+      </div>
+    </>
   );
 }
 

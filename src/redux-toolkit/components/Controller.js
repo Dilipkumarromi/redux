@@ -1,17 +1,18 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import { useDispatch } from "react-redux";
+import { counterActions } from "../store";
 
 function Controller() {
   const dispatch = useDispatch();
   const increment = () => {
-    dispatch({ type: "INCREMENT" });
+    dispatch(counterActions.increment())
   };
   const decrement = () => {
-    dispatch({ type: "DECREMENT" });
+    dispatch(counterActions.decrement())
   };
   const update=()=>{
-    dispatch({ type: "update", payload: 7 });
+    dispatch(counterActions.update())
   }
   return (
     <>
