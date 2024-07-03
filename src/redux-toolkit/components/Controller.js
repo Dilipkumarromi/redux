@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
-import { counterActions } from "../store";
+import { counterActions, privacyActions } from "../store";
 import InputGroup from "react-bootstrap/InputGroup";
 function Controller() {
   const dispatch = useDispatch();
@@ -16,6 +16,10 @@ function Controller() {
     console.log("update", e.target.value);
     dispatch(counterActions.update({type:"input", payload: e.target.value }));
   };
+
+  const privacyToggle=()=>{
+    dispatch(privacyActions.togglePrivacy())
+  }
   return (
     <>
       <div className="col-md-12 mt-2">
@@ -39,6 +43,10 @@ function Controller() {
       </div>
       <button className="btn btn-danger" onClick={update}>
         +7
+      </button>
+
+      <button className="btn btn-info" onClick={update}>
+
       </button>
     </>
   );
