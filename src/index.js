@@ -5,12 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux'
-import { counterActions } from './redux-toolkit/store';
+import counterStore from './redux-toolkit/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={counterActions}>
+    <Provider store={counterStore}>
     <App />
     </Provider>
   </React.StrictMode>
